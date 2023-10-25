@@ -13,10 +13,12 @@ import com.udacity.jdnd.course3.critter.repositories.ScheduleRepository;
 import com.udacity.jdnd.course3.critter.services.ScheduleService;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Transactional
 public class ScheduleServiceImpl implements ScheduleService {
 
     private final ScheduleRepository scheduleRepository;

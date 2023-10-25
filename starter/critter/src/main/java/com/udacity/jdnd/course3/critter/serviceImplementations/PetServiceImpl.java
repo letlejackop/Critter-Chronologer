@@ -9,10 +9,12 @@ import com.udacity.jdnd.course3.critter.repositories.PetRepository;
 import com.udacity.jdnd.course3.critter.services.PetService;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Transactional
 public class PetServiceImpl implements PetService {
     private final CustomerRepository customerRepository;
     private final PetRepository petRepository;
